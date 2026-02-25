@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import "@fontsource/ibm-plex-mono";
 import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white min-h-screen flex flex-col">
+      <body className="bg-black text-white font-mono min-h-screen flex flex-col">
         <div className="flex-1">
           {children}
         </div>
