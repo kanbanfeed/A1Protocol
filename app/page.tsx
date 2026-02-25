@@ -82,15 +82,6 @@ export default function Home() {
             filled in order of verification.
           </p>
         )}
-
-        {/* FOOTER */}
-        <footer className="pt-16 text-sm text-zinc-400">
-          <p>Crowbar Ventures Limited | London</p>
-          <p>
-            71-75 Shelton Street, Covent Garden, London, WC2H 9JQ United
-            Kingdom
-          </p>
-        </footer>
       </div>
     </main>
   );
