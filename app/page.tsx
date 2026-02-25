@@ -22,48 +22,56 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-black px-8 py-20">
-      <div className="w-full space-y-12">
+    <main className="min-h-screen bg-black text-white font-mono px-16 py-20">
+      <div className="max-w-3xl space-y-8">
 
-        {/* HEADLINE */}
-        <h1 className="text-3xl md:text-4xl tracking-wide">
-          A1 PROTOCOL:<br/><br/> INSTITUTIONAL STRATEGY CONSOLE
-        </h1>
+        {/* HEADER */}
+        <div className="space-y-2">
+          <div className="text-xs tracking-widest text-white">
+            [A1_PROTOCOL_CONSOLE]
+          </div>
 
-        {/* SUBHEADLINE + BLINK CURSOR */}
-        <p className="text-zinc-300 text-lg">
-          Membership Restricted. Currently verifying applicants for the Founding 100
-          <span className="animate-pulse ml-1">_</span>
-        </p>
+          <h1 className="text-2xl tracking-wide">
+            INSTITUTIONAL_STRATEGY_CONSOLE
+          </h1>
 
-        {/* SYSTEM STATUS */}
-        <div className="border border-zinc-700 px-4 py-3 text-zinc-200 text-center tracking-widest">
+          <div className="text-sm">
+            Membership Restricted. Verifying Founding 100 Applicants<span className="animate-pulse">_</span>
+          </div>
+        </div>
+
+        {/* STATUS */}
+        <div className="border border-white px-4 py-2 text-sm tracking-widest">
           [SYS_STATUS]: 87_FOUNDING_SEATS_REMAINING
         </div>
 
-        {/* PROPOSITION */}
-        <div className="text-zinc-300 space-y-4">
+        {/* CONTENT */}
+        <div className="text-sm leading-relaxed space-y-3">
           <p>
-            The A1 Protocol is a high-intensity strategic ritual. One 60-minute
-            session every 24 hours. 3 Executive Artifacts. Zero fluff. For A and
-            B-tier clientele only.
+            The A1 Protocol is a high-intensity strategic ritual.
+            One 60-minute session every 24 hours.
+            3 Executive Artifacts.
+            Zero fluff.
+            A and B-tier clientele only.
           </p>
 
           <p>
-            Founding Membership: $99/mo. Includes priority access to specialized
-            suites and lifetime price protection. Once the Founding 100 seats are
-            filled, the gate closes.
+            Founding Membership: $99/mo.
+            Priority access to specialized suites.
+            Lifetime price protection.
+            Gate closes at 100 seats.
           </p>
         </div>
 
+        {/* ACCESS */}
         {!success ? (
-          <form onSubmit={handleSubmit} className="space-y-6 pt-6 max-w-xl">
+          <form onSubmit={handleSubmit} className="space-y-4 pt-6 max-w-md">
 
             <input
               type="email"
               required
               placeholder="ENTER_EMAIL"
-              className="w-full bg-black border border-white px-4 py-3 text-white focus:outline-none"
+              className="w-full bg-black border border-white px-3 py-2 text-sm focus:outline-none"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -71,19 +79,16 @@ export default function Home() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full border border-white px-4 py-3 text-white hover:bg-white hover:text-black transition"
+              className="w-full border border-white px-3 py-2 text-sm hover:bg-white hover:text-black transition"
             >
               {loading ? "PROCESSING..." : "> INITIATE_ACCESS_PROTOCOL"}
             </button>
 
           </form>
         ) : (
-          <div className="pt-6 text-zinc-200">
+          <div className="text-sm pt-4">
             Application Received.
-            <br />
-            If your profile meets Protocol criteria, an Initiation Link will be dispatched.
-            <br />
-            Seats are filled in order of verification.
+            Initiation Link dispatched upon verification.
           </div>
         )}
 

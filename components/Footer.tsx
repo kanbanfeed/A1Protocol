@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-800 mt-20 py-10 text-sm text-zinc-400">
+    <footer className="border-t border-zinc-800 mt-10 py-10 text-sm text-zinc-400">
       <div className="max-w-5xl mx-auto px-6 flex flex-col items-center space-y-6 text-center">
 
         {/* Legal Links */}
