@@ -12,12 +12,8 @@ export default function PrivacyPolicy() {
 
         <h2 className="font-semibold">Data Collected</h2>
         <ul className="list-disc pl-6 space-y-1">
-          <li>Name, email, account details</li>
-          <li>Voice recordings during sessions</li>
-          <li>Transcripts</li>
-          <li>Generated reports</li>
-          <li>Usage logs</li>
-          <li>Billing data</li>
+          <li> Email details</li>
+          
         </ul>
 
         <h2 className="font-semibold">Voice Processing</h2>

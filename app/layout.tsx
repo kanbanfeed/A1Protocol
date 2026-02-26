@@ -16,13 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    
+
     <html lang="en">
       <body className="bg-black text-white font-mono h-full flex flex-col">
         <div className="flex-1">
           {children}
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
